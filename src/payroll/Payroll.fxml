@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="419.0" prefWidth="800.0" style="-fx-background-color: #FFFFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="payroll.PayrollController">
+    <children>
+        <Button fx:id="btn_add" layoutX="513.0" layoutY="150.0" onAction="#onButtonSave" text="Save" />
+      <TableView fx:id="table" layoutY="190.0" onMouseClicked="#onTableClick" prefHeight="229.0" prefWidth="800.0">
+        <columns>
+            <TableColumn fx:id="tc_id" editable="false" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="tc_name" editable="false" prefWidth="111.0" text="Name" />
+            <TableColumn fx:id="tc_gross" editable="false" prefWidth="70.0" text="Gross" />
+            <TableColumn fx:id="tc_basic" editable="false" prefWidth="57.0" text="Basic" />
+            <TableColumn fx:id="tc_house_rent" editable="false" text="House Rent" />
+            <TableColumn fx:id="tc_medical" editable="false" prefWidth="66.0" text="Medical" />
+            <TableColumn fx:id="tc_per_day" editable="false" prefWidth="73.0" text="Per Day" />
+            <TableColumn fx:id="tc_per_hour" editable="false" prefWidth="73.0" text="Per Hour" />
+            <TableColumn fx:id="tc_over_time" editable="false" prefWidth="73.0" text="Over Time" />
+            <TableColumn fx:id="tc_over_time_pay" editable="false" prefWidth="73.0" text="O.T.P" />
+            <TableColumn fx:id="tc_payable" editable="false" prefWidth="73.0" text="Payable" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER_RIGHT" layoutX="32.0" layoutY="14.0" prefHeight="27.0" prefWidth="88.0" text="ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tx_id" layoutX="124.0" layoutY="15.0" promptText="Enter ID" />
+      <TextField fx:id="tx_name" layoutX="402.0" layoutY="15.0" promptText="Enter Name" />
+      <Label alignment="CENTER_RIGHT" layoutX="310.0" layoutY="14.0" prefHeight="27.0" prefWidth="88.0" text="Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="32.0" layoutY="68.0" prefHeight="27.0" prefWidth="88.0" text="Basic:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tx_basic" editable="false" layoutX="124.0" layoutY="69.0" text="0" />
+      <TextField fx:id="tx_gross" layoutX="124.0" layoutY="42.0" onInputMethodTextChanged="#calculateValues" onKeyPressed="#calculateValues" onKeyReleased="#calculateValues" onKeyTyped="#calculateValues" promptText="Enter Gross Salary" />
+      <Label alignment="CENTER_RIGHT" layoutX="32.0" layoutY="41.0" prefHeight="27.0" prefWidth="88.0" text="Gross:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="32.0" layoutY="122.0" prefHeight="27.0" prefWidth="88.0" text="Per Day:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tx_per_day" editable="false" layoutX="124.0" layoutY="123.0" text="0" />
+      <TextField fx:id="tx_per_hour" editable="false" layoutX="402.0" layoutY="122.0" text="0" />
+      <Label alignment="CENTER_RIGHT" layoutX="310.0" layoutY="121.0" prefHeight="27.0" prefWidth="88.0" text="Per Hour:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="32.0" layoutY="95.0" prefHeight="27.0" prefWidth="88.0" text="Medical:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tx_medical" editable="false" layoutX="124.0" layoutY="96.0" text="0" />
+      <TextField fx:id="tx_house_rent" editable="false" layoutX="402.0" layoutY="69.0" text="0" />
+      <Label alignment="CENTER_RIGHT" layoutX="284.0" layoutY="68.0" prefHeight="27.0" prefWidth="114.0" text="House Rent:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="32.0" layoutY="149.0" prefHeight="27.0" prefWidth="88.0" text="Payable:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tx_payable" editable="false" layoutX="124.0" layoutY="150.0" text="0" />
+      <Label alignment="CENTER_RIGHT" layoutX="296.0" layoutY="95.0" prefHeight="27.0" prefWidth="102.0" text="O.T.P:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tx_over_time_pay" editable="false" layoutX="402.0" layoutY="96.0" text="0" />
+      <TextField fx:id="tx_over_time" layoutX="402.0" layoutY="42.0" onInputMethodTextChanged="#calculateValues" onKeyPressed="#calculateValues" onKeyReleased="#calculateValues" onKeyTyped="#calculateValues" promptText="Over Time Hour" />
+      <Label alignment="CENTER_RIGHT" layoutX="310.0" layoutY="41.0" prefHeight="27.0" prefWidth="88.0" text="Over Time:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="743.0" layoutY="15.0" mnemonicParsing="false" onAction="#onButtonClear" text="Clear" />
+      <Button fx:id="btnDelete" disable="true" layoutX="402.0" layoutY="150.0" mnemonicParsing="false" onAction="#onButtonDelete" text="Delete" />
+      <Button fx:id="btnReport" disable="true" layoutX="682.0" layoutY="150.0" mnemonicParsing="false" onAction="#onButtonReport" text="Generate Report" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #FFFFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="29.0" layoutY="290.0" prefHeight="27.0" prefWidth="130.0" text="Over Time:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="317.0" prefHeight="27.0" prefWidth="130.0" text="Over Time Pay:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="344.0" prefHeight="27.0" prefWidth="130.0" text="Payable:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="155.0" prefHeight="27.0" prefWidth="130.0" text="House Rent:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="182.0" prefHeight="27.0" prefWidth="130.0" text="Medical:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="263.0" prefHeight="27.0" prefWidth="130.0" text="Per Hour:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="236.0" prefHeight="27.0" prefWidth="130.0" text="Per Day:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="209.0" prefHeight="27.0" prefWidth="130.0" text="Gross:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="128.0" prefHeight="27.0" prefWidth="130.0" text="Basic:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="101.0" prefHeight="27.0" prefWidth="130.0" text="Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="74.0" prefHeight="27.0" prefWidth="130.0" text="ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tx_id" layoutX="171.0" layoutY="74.0" prefHeight="27.0" prefWidth="130.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tx_name" layoutX="171.0" layoutY="101.0" prefHeight="27.0" prefWidth="130.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tx_basic" layoutX="171.0" layoutY="128.0" prefHeight="27.0" prefWidth="130.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tx_gross" layoutX="171.0" layoutY="209.0" prefHeight="27.0" prefWidth="130.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tx_per_day" layoutX="171.0" layoutY="236.0" prefHeight="27.0" prefWidth="130.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tx_per_hour" layoutX="171.0" layoutY="263.0" prefHeight="27.0" prefWidth="130.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tx_medical" layoutX="171.0" layoutY="182.0" prefHeight="27.0" prefWidth="130.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tx_house_rent" layoutX="171.0" layoutY="155.0" prefHeight="27.0" prefWidth="130.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tx_payable" layoutX="171.0" layoutY="344.0" prefHeight="27.0" prefWidth="130.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tx_over_time_pay" layoutX="171.0" layoutY="317.0" prefHeight="27.0" prefWidth="130.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="tx_over_time" layoutX="171.0" layoutY="290.0" prefHeight="27.0" prefWidth="130.0" text="...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="8.0" layoutY="14.0" prefHeight="35.0" prefWidth="484.0" text="Payroll Management System" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="Calibri" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnPrint" layoutX="445.0" layoutY="358.0" mnemonicParsing="false" onAction="#onButtonPrint" text="Print" />
+   </children>
+</AnchorPane>
